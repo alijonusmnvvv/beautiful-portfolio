@@ -7,7 +7,11 @@ export const ThemeToggle = () => {
 
     useEffect(() => {
         const storedTheme = localStorage.getItem("theme");
-        if (storedTheme === "dark") {
+
+        // Default to DARK if nothing is stored yet
+        const theme = storedTheme ?? "dark";
+
+        if (theme === "dark") {
             document.documentElement.classList.add("dark");
             // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsDarkMode(true);
@@ -15,7 +19,13 @@ export const ThemeToggle = () => {
             document.documentElement.classList.remove("dark");
             setIsDarkMode(false);
         }
+
+        // Save the default so next visits are consistent
+        if (!storedTheme) {
+            localStorage.setItem("theme", "dark");
+        }
     }, []);
+
 
     const toggleTheme = () => {
         if (isDarkMode) {
