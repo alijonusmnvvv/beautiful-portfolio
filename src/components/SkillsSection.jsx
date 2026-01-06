@@ -23,13 +23,16 @@ const skills = [
     // Tools
     { name: "Git/GitHub", level:85, category: "tools" },
     { name: "Figma", level:80, category: "tools" },
+    { name: "Jira", level:90, category: "tools" },
+    { name: "Cisco Packet Tracer", level:80, category: "tools" },
+    { name: "Hostinger", level:60, category: "tools" },
     { name: "WordPress", level:70, category: "tools" },    
     { name: "Cursor", level:60, category: "tools" },
     { name: "Postman", level:70, category: "tools" },
     { name: "Spline", level:50, category:"tools"},
 
     // Cloud Platforms
-    { name: "AWS", level:60, category: "cloud" },
+    { name: "AWS", level:65, category: "cloud" },
 ];
 
 const categories = [ "all", "frontend", "backend", "tools", "cloud" ];
