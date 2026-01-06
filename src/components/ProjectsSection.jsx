@@ -7,7 +7,7 @@ const projects = [
         description: "A beautiful landing page for a Crypto project.",
         image: "/projects/CryptoProject.png",
         tags: ["Figma"],
-        demoURL: "https://www.figma.com/design/4ya30lrmbRikaPUjemsYWY/SaaS-LP---BitApp?node-id=0-1&t=Jt4qP2emlDobVQva-1",
+        figmaURL: "https://www.figma.com/design/4ya30lrmbRikaPUjemsYWY/SaaS-LP---BitApp?node-id=0-1&t=Jt4qP2emlDobVQva-1",
         githubURL: "https://github.com/alijonusmnvvv/SaaS-Landing-Page.git",
     },
     {
@@ -16,7 +16,7 @@ const projects = [
         description: "A modern NFT marketplace for digital art.",
         image: "/projects/NFTProject.png",
         tags: ["Figma"],
-        demoURL: "https://www.figma.com/design/Afb0Z8ouHqodUzL2Fx1uOQ/NFT-Marketplace?node-id=0-1&t=bOUN5R20Rnp8fbMv-1",
+        figmaURL: "https://www.figma.com/design/Afb0Z8ouHqodUzL2Fx1uOQ/NFT-Marketplace?node-id=0-1&t=bOUN5R20Rnp8fbMv-1",
         githubURL: "https://github.com/alijonusmnvvv/NFT-Marketplace.git",
     },
     {
@@ -25,8 +25,9 @@ const projects = [
         description: "A sleek platform for stock trading and investment management.",
         image: "/projects/Investooms.png",
         tags: ["Figma", "HTML/CSS", "JavaScript"],
-        demoURL: "https://www.figma.com/design/eeFOFzA7e18q8sVWeh57Yp/Final?node-id=0-1&t=eAI7AID4KDmAnASg-1",
+        figmaURL: "https://www.figma.com/design/eeFOFzA7e18q8sVWeh57Yp/Final?node-id=0-1&t=eAI7AID4KDmAnASg-1",
         githubURL: "https://github.com/alijonusmnvvv/Investooms.git",
+        demoURL: "https://alijonusmnvvv.github.io/Investooms/",
     },
 ];
 
@@ -67,12 +68,36 @@ export const ProjectsSection = () => {
                                 </p>
                                 <div className="flex justify-between items-center">
                                     <div className="flex space-x-3">
-                                        <a href={project.demoURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                             <Figma size={20} />
-                                        </a>
-                                        <a href={project.githubURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                             <Github size={20}/>
-                                        </a>
+                                        {project.figmaURL && (
+                                            <a
+                                                href={project.figmaURL}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                            >
+                                                <Figma size={20} />
+                                            </a>
+                                        )}
+                                        {project.githubURL && (
+                                            <a
+                                                href={project.githubURL}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                            >
+                                                <Github size={20} />
+                                            </a>
+                                        )}
+                                        {project.demoURL && (
+                                            <a
+                                                href={project.demoURL}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                            >
+                                                <ExternalLink size={20} />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
