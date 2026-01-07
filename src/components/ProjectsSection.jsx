@@ -29,6 +29,17 @@ const projects = [
         githubURL: "https://github.com/alijonusmnvvv/Investooms.git",
         demoURL: "https://alijonusmnvvv.github.io/Investooms/",
     },
+    {
+        id: 4,
+        title: "3D Website",
+        description: "A modern 3D landing page, featuring smooth animations and a premium UI.",
+        image: "/projects/3D-Website.png",
+        tags: ["React", "Tailwind CSS", "Spline",],
+        figmaURL: "https://www.figma.com/design/HHgh6yK2TbHxDANxpxQDpB/3D-Website?node-id=0-1&t=UJc40DzD60kxxxFh-1", 
+        githubURL: "https://github.com/alijonusmnvvv/3D-Website.git",
+        demoURL: "https://alijonusmnvvv.github.io/3D-Website/",
+    },
+
 ];
 
 export const ProjectsSection = () => {
