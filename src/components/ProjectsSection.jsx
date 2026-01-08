@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ArrowRight, Figma} from "lucide-react";
+import { ExternalLink, Github, ArrowRight, Figma, Spline} from "lucide-react";
 
 const projects = [
     {
@@ -35,7 +35,8 @@ const projects = [
         description: "A modern 3D landing page, featuring smooth animations and a premium UI.",
         image: "/projects/3D-Website.png",
         tags: ["React", "Tailwind CSS", "Spline",],
-        figmaURL: "https://www.figma.com/design/HHgh6yK2TbHxDANxpxQDpB/3D-Website?node-id=0-1&t=UJc40DzD60kxxxFh-1", 
+        figmaURL: "https://www.figma.com/design/HHgh6yK2TbHxDANxpxQDpB/3D-Website?node-id=0-1&t=UJc40DzD60kxxxFh-1",
+        splineURL: "https://app.spline.design/file/082cb0b0-a4a3-43f9-b1d1-c7317f104c4b", 
         githubURL: "https://github.com/alijonusmnvvv/3D-Website.git",
         demoURL: "https://alijonusmnvvv.github.io/3D-Website/",
     },
@@ -87,6 +88,16 @@ export const ProjectsSection = () => {
                                                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
                                             >
                                                 <Figma size={20} />
+                                            </a>
+                                        )}
+                                        {project.splineURL && (
+                                            <a
+                                                href={project.splineURL}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                            >
+                                                <Spline size={20} />
                                             </a>
                                         )}
                                         {project.githubURL && (
